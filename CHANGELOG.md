@@ -1,3 +1,9 @@
+## v3.6.3 (2022-06-27)
+
+### Fix
+
+- **ga**: failed to load Google Analytics
+
 ## v3.6.2 (2022-06-12)
 
 ### Fix
@@ -7,6 +13,10 @@
 ### Refactor
 
 - **typings**: revise `waitForElement` types
+
+### Feat
+
+- **egg**: ***
 
 ## v3.6.1 (2022-06-01)
 
