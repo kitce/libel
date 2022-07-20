@@ -2,7 +2,7 @@ import type webpack from 'webpack';
 import svgLoader from '../loaders/svg-loader';
 
 export const resource: webpack.RuleSetRule = {
-  test: /\.(gif|jpg|png|svg|webp)$/i,
+  test: /\.(gif|jpg|jpeg|png|svg|webp)$/i,
   type: 'asset/resource',
   resourceQuery: { not: /svgr/ },
   generator: { emit: false }

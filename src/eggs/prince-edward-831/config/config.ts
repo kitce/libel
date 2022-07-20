@@ -42,4 +42,4 @@ export const interval = 2000;
 
 export const caption = '點擊以勾起更多記憶';
 
-export const videoURL = 'https://www.youtube.com/watch?v=vIau2kwxzZA&has_verified=1';
+export const referenceURL = 'https://www.youtube.com/watch?v=vIau2kwxzZA&has_verified=1';

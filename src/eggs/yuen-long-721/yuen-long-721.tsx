@@ -4,20 +4,16 @@ import { waitForElement } from '../../helpers/dom';
 import EasterEgg from '../../models/EasterEgg';
 import lihkgSelectors from '../../stylesheets/variables/lihkg/selectors.module.scss';
 import { caption, enabled, images, interval, referenceURL } from './config/config';
-import styles from './prince-edward-831.module.scss';
+import styles from './yuen-long-721.module.scss';
 
 /**
- * Prince Edward 831
- * @see https://zh.wikipedia.org/wiki/太子站襲擊事件
- * @see https://collection.news/thestandnews/articles/100620
- * @see https://collection.news/thestandnews/articles/100882
- * @see https://collection.news/thestandnews/articles/101392
- * @see https://collection.news/thestandnews/articles/101503
- * @see https://collection.news/thestandnews/articles/101901
- * @see https://collection.news/thestandnews/articles/101508
- * @see https://collection.news/thestandnews/articles/119218
- * @see https://www.hkcnews.com/article/29919/監警會-831警察太子站打人-監警會報告-29929/【監警會評831太子站】警無差別打人、傷者47分鐘後10變7、特別列車送荔枝角-報告沒解釋
- * @see https://www.inmediahk.net/node/1076951
+ * Yuen Long 721
+ * @see https://theinitium.com/article/20190723-hongkong-yuenlong-incident-timeline/
+ * @see https://www.hkcnews.com/antielab-conflicts/721/721.html
+ * @see https://www.bbc.com/zhongwen/trad/chinese-news-57526233
+ * @see https://www.bbc.com/zhongwen/trad/chinese-news-49070742
+ * @see https://www.rfa.org/mandarin/yataibaodao/gangtai/al1-07222019064649.html
+ * @see https://zh.wikipedia.org/zh-hk/元朗襲擊事件
  */
 const hatch = async () => {
   const notice = await waitForElement(lihkgSelectors.notice);
@@ -45,6 +41,7 @@ const hatch = async () => {
       className={styles.slideshow}
       images={_images}
       interval={interval}
+      fit
     />
   );
 };

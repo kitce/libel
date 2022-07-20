@@ -1,25 +1,51 @@
 @import '../../stylesheets/base';
 
-.egg :global(#{$lihkg-selector-left-panel}) {
+.egg :global(#{$lihkg-selector-notice}) {
   @apply relative;
 
-  .underlay {
-    @apply fixed top-0 left-0;
-    @apply h-full w-full;
-    @apply filter;
-    --tw-drop-shadow: drop-shadow(0 0 1rem black);
-    @apply opacity-10;
-    @apply bg-center bg-cover bg-no-repeat;
-    background-image: $image-721-yuen-long-mtr;
+  .container {
+    @apply relative;
+    @apply inline-block;
+    @apply overflow-hidden;
+    @apply w-full;
 
-    @screen md {
-      width: 30%;
-      min-width: 300px;
-      max-width: 480px;
+    &:before,
+    &:after {
+      @apply absolute;
     }
 
-    @include dark-mode() {
-      @apply opacity-5;
+    // logo
+    &:before {
+      content: '';
+      @include logo();
+      z-index: 1;
+    }
+
+    // caption
+    &:after {
+      content: attr(aria-label);
+      @apply right-0 bottom-0 left-0;
+      @apply p-4;
+      @apply box-border;
+      @apply text-center text-xl;
+      color: $color-white;
+      @apply transform;
+      @apply translate-y-full;
+      @apply transition-transform;
+      @apply duration-500;
+      background-image: linear-gradient(transparent, #000);
+      z-index: 1;
+    }
+
+    &:hover {
+      &:after {
+        @apply translate-y-0;
+      }
+    }
+
+    .slideshow {
+      @apply absolute top-0 left-0;
+      @apply h-full w-full;
     }
   }
 }
